@@ -1,0 +1,21 @@
+HTML tags used:
+1. <div>
+2. <b>
+3. <i>
+4. <h1>
+5. <h2>
+6. <h3>
+7. <p>
+8. <button>
+9. <a>
+10. <form>
+
+CSS tags used:
+1. display
+2. padding
+3. text-decoration
+4. background-color
+5. border
+
+Description of how I use my Javascript and Bootstrap:
+- I used Bootstrap for my accordions buttons, and Javascript for my google search box.

@@ -1,0 +1,35 @@
+// Calculate the blur values using the copy
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            long sumRed = 0;
+            long sumGreen = 0;
+            long sumBlue = 0;
+            int count = 0;
+
+            // Loop over the pixel and its neighbors
+            for (int di = -1; di <= 1; di++)
+            {
+                for (int dj = -1; dj <= 1; dj++)
+                {
+                    int ni = i + di;
+                    int nj = j + dj;
+
+                    // Check if the neighboring pixel is within the bounds of the image
+                    if (ni >= 0 && ni < height && nj >= 0 && nj < width)
+                    {
+                        sumRed += copy[ni][nj].rgbtRed;
+                        sumGreen += copy[ni][nj].rgbtGreen;
+                        sumBlue += copy[ni][nj].rgbtBlue;
+                        count++;
+                    }
+                }
+            }
+
+            // Calculate the average color values
+            avgRed[i][j] = (int) round(sumRed / (float) count);
+            avgGreen[i][j] = (int) round(sumGreen / (float) count);
+            avgBlue[i][j] = (int) round(sumBlue / (float) count);
+        }
+    }

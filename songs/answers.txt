@@ -1,0 +1,11 @@
+1. If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+Answer: You can use the command "SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;" to get the avarage of each stat that would characterize the Aura of the listener in question.
+After executing this command, it's possible to see that the average energy is '0.659', the average of valence is '0.484' and the average of danceability is '0.716', where 1 should be maximum in the scale and 0 minimum.
+As the average danceability is high, and the energy could be consider a bit high, I would characterize their audio aura between Purple and Orange. Probably Purple, people valence is a bit low.
+
+2. Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener.
+What better ways of calculating this aura would you propose?
+Answer: As we're not calculting the tempo and lyrics, it's kind of hard to know exactly. Also, the 'audio aura' meaning as presented is in some way too broad.
+You surely need more information for the range of average number in each aura category needs to be. For example, it's hard to decide if '0.659' energy is too low for an considered Orange aura, or too high for a Blue aura, etc.
+Of course they have set this information, but it was not presented to me.
+We probably need more information on how to decide which color this listener goes to after having the numbers calculated.

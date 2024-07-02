@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock List
+{% endblock %}
+
+{% block main %}
+
+    <h1>Your current stocks</h1>
+    <p><h2>---------------------------------------------------------------------</h2></p>
+    <h3>Current cash: {{ current_cash | usd }}</h3>
+    <p><h3>----------------------------------------------------------</h3></p>
+    <p></p>
+
+    {% for stock in stocks %}
+        <p><b>Quote:</b> {{ stock.symbol }}</p>
+        <p><b>Number of shares:</b> {{ stock.total_shares }}</p>
+        <p><b>Current price:</b> {{ stock.current_price | usd }}</p>
+        <p><b>Total value:</b> {{ stock.total_value | usd}}</p>
+        <p><b>-----------------------------------------------------------------------------</b></p>
+
+    {% endfor %}
+
+{% endblock %}
