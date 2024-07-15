@@ -23,7 +23,7 @@ int main(void)
     {
         string phrase = get_string("Enter a new phrase: ");
 
-        // TODO: add phrase to new node in list
+        // Add phrase to new node in list
         node *n = malloc(sizeof(node));
 
         if (n == NULL)
